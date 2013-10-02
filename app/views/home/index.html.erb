@@ -1,0 +1,48 @@
+
+<div class='wrapper'>
+  <div class='title'> 
+    <div class='txt'>
+      <h1> Meat Book 4 U </h1>
+      <h2> Okay Cupid Photos (infinite scroll) </h2>
+    </div>
+  </div>  
+
+  <% @collection.shuffle.each do |person| %>
+    <img src='<%= person.small_avatar_url %>'>
+  <% end %>
+</end>
+
+
+<script>
+ var g_data = null 
+ function testAjax() {
+    $.get('', null, function(data){
+
+
+     $.each(data,function(index){
+       
+        var $newImage = $('<img>');
+        $newImage.attr('src', data[index].small_avatar_url);
+        $('.wrapper').append($newImage)
+     })
+    }, 'json')
+  }
+
+
+var scroll=true;
+$(window).scroll(function () {
+    if(scroll==true)
+    {
+      if ($(window).height() + $(window).scrollTop() == $(document).height()) {
+        scroll == false; 
+        testAjax() ;
+        }
+    }
+  });
+
+
+
+  // 
+  // newImage.attr('src','')
+ 
+</script>

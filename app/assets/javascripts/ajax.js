@@ -1,0 +1,3 @@
+function testAjax() {
+    $.get( "/index/");
+}
