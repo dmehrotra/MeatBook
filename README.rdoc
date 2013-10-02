@@ -3,4 +3,6 @@
 Thanks to trek for his lonely_coder gem!
 
 Please feel free to use a different markup language if you do not plan to run
+
+demo here: frozen-badlands-3634.herokuapp.com/ 
 <tt>rake doc:app</tt>.
